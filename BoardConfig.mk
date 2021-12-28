@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/ares
+DEVICE_PATH := device/xiaomi/agate
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -33,7 +33,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := ares
+TARGET_BOOTLOADER_BOARD_NAME := agate
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
@@ -41,7 +41,7 @@ TARGET_USES_UEFI := true
 TARGET_BOARD_PLATFORM := mt6893
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := ares,aresin
+TARGET_OTA_ASSERT_DEVICE := agate,agatein,amber
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
@@ -61,8 +61,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-  TARGET_KERNEL_CONFIG := ares_user_defconfig
-  TARGET_KERNEL_SOURCE := kernel/xiaomi/ares
+  TARGET_KERNEL_CONFIG := agate_user_defconfig
+  TARGET_KERNEL_SOURCE := kernel/xiaomi/agate
   TARGET_KERNEL_CLANG_COMPILE := true
 endif
 
